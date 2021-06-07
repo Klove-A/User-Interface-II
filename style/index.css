@@ -62,7 +62,6 @@ header{
 .nav{
     background-color: #FFFAFA;
     padding: 0.25% 1.5%;
-    border:1px solid #4f4f4f;
 }
 h1, h2, h3{
     font-family: 'Nunito', sans-serif;
@@ -111,11 +110,11 @@ a{
 .gallery{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
 }
 .pic{
-    margin: 2.5%;
+    width: 25%;
 }
 footer{
     background-color: mistyrose;
@@ -124,4 +123,53 @@ footer{
     font-size: 2rem;
     display: flex;
     justify-content: center;
+}
+@media(max-width: 800px){
+    /*if the screen size is 800px or smaller apply these styles*/
+    header{
+        background-color: #FFFAFA;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    h1{
+        justify-content: center;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 35%;
+        padding: 2% 0;
+        border:1px solid #4f4f4f;
+    }
+
+    .top{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left, .right{
+        width: 70%;
+    }
+    .projects{
+        background-color: #FFFAFA;
+        border:1px solid #4f4f4f;
+        padding: 2% 4%;
+    }        
+    
+    .gallery{
+        justify-content: space-around;
+    }
+    .pic{
+        width: 45%;
+    }
+    .contacts{
+        border:1px solid #4f4f4f;
+        margin: 0 35%;
+        padding: 1% 0;
+    }
+}
+
+@media(max-width: 500px){
+    /*if the screen size is 500px or smaller apply these styles. In this cace it dose not seem necessary*/
 }
